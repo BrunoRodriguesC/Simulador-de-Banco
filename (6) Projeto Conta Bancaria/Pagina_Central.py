@@ -73,6 +73,33 @@ def MostrarSaldo():
         print("\n")
         return MostrarSaldo()
 
+def Saque():
+    global saque
+    global Saldo
+    print(f"Saldo: R$ {Saldo:.2f}""\n")
+    saque = float(input("Quanto voce deseja retirar R$: "))
+    Saldo -= saque
+    if saque > Saldo:
+        os.system("cls")
+        print("Se deseja voltar pressione - 0")
+        print("Saldo insuficiente")
+        return Saque()
+    if saque == 0:
+        os.system("cls")
+        return escolha()
+    print("Retirada com sucesso")
+    print("Deseja retirar novamente ?")
+    OutroSaque = Char(input("1 - Sim\n2 - Nao\n3 - Voltar\n"))
+    if OutroSaque == "1":
+        os.system("cls")
+        return Saque()
+    elif OutroSaque == "2":
+        os.system("cls")
+        return escolha()
+    elif OutroSaque == "3":
+        os.system("cls")
+        return escolha()
+# Arrumar saque negativo e erro ao retirar saque igual a saldo
 
 def escolha():
     print("-"*40,"Menu Inicial","-"*40)
@@ -81,7 +108,8 @@ def escolha():
         os.system("cls")
         return MostrarSaldo() 
     elif opcoes == "2":
-        print("Saque") 
+        os.system("cls")
+        return Saque()
     elif opcoes == "3":
         os.system("cls")
         return Depositar()
@@ -95,3 +123,6 @@ def escolha():
         print("Comando invalido, tente novamente")
         print("\n")
         return escolha()
+
+
+escolha()

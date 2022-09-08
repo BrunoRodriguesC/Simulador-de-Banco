@@ -1,0 +1,13 @@
+projeto do banco
+fazer um front onde se conecta com o back e um banco de dados
+fazer um front com tela inicia, onde se possa fazer um login, apos isso vai para uma tela inicial onde vai
+aparecer algumas informacoes e coisas como saque, deposito, transferencia e sair,
+html botao de saque(aparecer botao na tela)
+ quando apertar o botao de saque, vai mandar para uma outra tela, onde tem opcoes relacionadas ao saque
+ nesta tela vai precisar fazer um get no back usando as credenciais para saber o saldo do cliente
+ e tambem para diminuir o valor apos a transacao
+	
+
+
+fazer o banco de dados para para armazenar os valores dos clientes como saldo credenciais e outras coisas
+
